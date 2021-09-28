@@ -11,4 +11,8 @@ import com.mau.notesapp.feature_note.domain.model.Notes
 abstract class NoteDataBase : RoomDatabase() {
 
     abstract val noteDao: NoteDao
+
+    companion object{
+        const val DATABASE_NAME = "NoteDB"
+    }
 }
