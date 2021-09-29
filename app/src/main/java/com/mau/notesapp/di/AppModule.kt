@@ -6,6 +6,7 @@ import com.mau.notesapp.feature_note.data.data_source.NoteDao
 import com.mau.notesapp.feature_note.data.data_source.NoteDataBase
 import com.mau.notesapp.feature_note.data.repository.NoteRepositoryImpl
 import com.mau.notesapp.feature_note.domain.repository.NoteRepository
+import com.mau.notesapp.feature_note.domain.use_case.AddNote
 import com.mau.notesapp.feature_note.domain.use_case.DeleteNote
 import com.mau.notesapp.feature_note.domain.use_case.GetNotes
 import com.mau.notesapp.feature_note.domain.use_case.NoteUsecases
@@ -40,7 +41,8 @@ object AppModule {
     fun provideNoteUseCases(repository: NoteRepository): NoteUsecases{
         return NoteUsecases(
             getNotes = GetNotes(repository),
-            deleteNote = DeleteNote(repository)
+            deleteNote = DeleteNote(repository),
+            addNote = AddNote(repository)
         )
     }
 }
