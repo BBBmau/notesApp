@@ -1,4 +1,4 @@
-package com.mau.notesapp.feature_note.presentation.notes.components
+package com.mau.notesapp.feature_note.presentation.notes
 
 import androidx.compose.runtime.State
 import androidx.compose.runtime.mutableStateOf
@@ -37,6 +37,7 @@ class NotesViewModel @Inject constructor(
                 if(state.value.noteOrder::class == event.noteOrder::class &&
                         state.value.noteOrder.orderType == event.noteOrder.orderType)
                             return
+                getNotes(event.noteOrder)
             }
             is NotesEvent.DeleteNote -> {
                 viewModelScope.launch {

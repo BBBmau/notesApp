@@ -1,4 +1,4 @@
-package com.mau.notesapp.feature_note.presentation.notes.components
+package com.mau.notesapp.feature_note.presentation.notes
 
 import com.mau.notesapp.feature_note.domain.model.Notes
 import com.mau.notesapp.feature_note.domain.util.NoteOrder
